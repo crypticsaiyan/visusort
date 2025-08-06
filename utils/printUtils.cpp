@@ -1,0 +1,33 @@
+#include "utils.hpp"
+#include "../globals.hpp"
+#include <cmath>
+
+
+void printSymbol(size_t indexSelected, char ch, std::vector<int32_t> &v)
+{
+  int spaces = 0;
+  for (size_t i = 0; i < indexSelected; i++)
+  {
+    spaces += log10(v[i]) + 4;
+  }
+  spaces += log10(v[indexSelected]) / 2 + 1;
+  for (int i = 0; i < spaces; i++)
+  {
+    std::cout << ' ';
+  }
+  std::cout << ch << std::endl;
+}
+
+void printArr(std::vector<int32_t> &v)
+{
+  for (int i = 0; i < v.size(); i++)
+  {
+    if (red == i)
+      std::cout << RED << "[" << v[i] << "] " << RESET;
+    else if (green == i)
+      std::cout << GREEN << "[" << v[i] << "] " << RESET;
+    else
+      std::cout << "[" << v[i] << "] ";
+  }
+  std::cout << std::endl;
+}

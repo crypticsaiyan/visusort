@@ -1,0 +1,52 @@
+# Compiled binaries
+main
+*.exe
+*.out
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Static and shared libraries
+*.a
+*.so
+*.dylib
+*.dll
+
+# VS Code settings (optional - remove if you want to share VS Code config)
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# IDE files
+*.vcxproj*
+*.sln
+*.user
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Temporary files
+*~
+*.swp
+*.tmp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+.vscode
