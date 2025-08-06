@@ -9,3 +9,4 @@
 
 extern size_t red;
 extern size_t green;
+extern size_t comparisons;

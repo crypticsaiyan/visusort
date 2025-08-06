@@ -58,7 +58,6 @@ while True:
         clear()
         print("\033[?25h", end="", flush=True)  # Show cursor
         subprocess.run(["./main", mapping[options[selected]]])
-        print("\nPress any key to return to menu...")
         get_key()
     elif key.lower() == "q":
         clear()

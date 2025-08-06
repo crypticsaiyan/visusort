@@ -11,6 +11,7 @@ void greeter()
  ╚████╔╝ ██║███████║╚██████╔╝███████║╚██████╔╝██║  ██║   ██║   
   ╚═══╝  ╚═╝╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
 )" << "\n";
-  std::cout << "\033[1m[Quicksort]\033[0m" << std::endl;
-  std::cout << "\n";
+  std::cout << "\033[1m[Quicksort]\033[0m";
+  std::cout << "\t\t\tcomparisons: " << comparisons;
+  std::cout << "\n\n";
 }
