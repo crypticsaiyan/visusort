@@ -8,12 +8,12 @@ void selectionSort(std::vector<int32_t> &v)
     red = i;
     green = i;
     size_t minIndex = i;
-    runAnimation(min, minIndex, i, i, v);
+    runAnimation(i, i, v);
     clear();
     for (size_t j = i + 1; j < v.size(); j++)
     {
       comparisons++;
-      runAnimation(min, minIndex, j, i, v);
+      runAnimation(j, i, v);
       clear();
       bool changed = 0;
       if (v[j] < min)
@@ -25,16 +25,16 @@ void selectionSort(std::vector<int32_t> &v)
       }
       if (changed)
       {
-        runAnimation(min, minIndex, j, i, v);
+        runAnimation(j, i, v);
         clear();
       }
     }
-    runAnimation(min, minIndex, v.size() - 1, i, v);
+    runAnimation(v.size() - 1, i, v);
     if (i != minIndex)
     {
       clear();
       swap(v[i], v[minIndex]);
-      runAnimation(min, minIndex, v.size() - 1, i, v);
+      runAnimation(v.size() - 1, i, v);
     }
     if (i != v.size() - 2 && (v.size() != 2))
       clear();

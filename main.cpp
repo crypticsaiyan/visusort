@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     return 1;
   }
 
-  std::string algorithm = argv[1];
+  algorithm = argv[1];
 
   size_t n;
   int32_t max = 0;
@@ -45,9 +45,7 @@ int main(int argc, char *argv[])
   }
   else if (algorithm == "insertion")
   {
-    // insertionSort(v); // TODO: Implement insertion sort
-    std::cerr << "Insertion sort not yet implemented" << std::endl;
-    return 1;
+    insertionSort(v);
   }
   else if (algorithm == "bubble")
   {

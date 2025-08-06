@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstddef>
+#include <string>
 
 #define GREEN "\033[32m"
 #define RED "\033[31m"
@@ -10,3 +11,5 @@
 extern size_t red;
 extern size_t green;
 extern size_t comparisons;
+extern int pause_duration;
+extern std::string algorithm;

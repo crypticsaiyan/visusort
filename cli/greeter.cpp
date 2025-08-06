@@ -11,7 +11,10 @@ void greeter()
  ╚████╔╝ ██║███████║╚██████╔╝███████║╚██████╔╝██║  ██║   ██║   
   ╚═══╝  ╚═╝╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
 )" << "\n";
-  std::cout << "\033[1m[Quicksort]\033[0m";
+  if (algorithm == "selection")
+    std::cout << "\033[1m[Selection Sort]\033[0m";
+  else if (algorithm == "insertion")
+    std::cout << "\033[1m[Insertion Sort]\033[0m";
   std::cout << "\t\t\tcomparisons: " << comparisons;
   std::cout << "\n\n";
 }
