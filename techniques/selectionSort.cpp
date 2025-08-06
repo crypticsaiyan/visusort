@@ -11,7 +11,7 @@ void selectionSort(std::vector<int32_t> &v)
     for (size_t j = i; j < v.size(); j++)
     {
       runAnimation(min, minIndex, j, i, v);
-      std::cout << "\033[2J\033[1;1H"; // Clears screen and moves cursor to top-left
+      clear();
       bool changed = 0;
       if (v[j] < min)
       {
@@ -23,24 +23,17 @@ void selectionSort(std::vector<int32_t> &v)
       if (changed)
       {
         runAnimation(min, minIndex, j, i, v);
-        std::cout << "\033[2J\033[1;1H"; // Clears screen and moves cursor to top-left
+        clear();
       }
     }
     runAnimation(min, minIndex, v.size() - 1, i, v);
-    if (i != minIndex)
+    clear();
+    if (i != minIndex )
     {
-      // std::cout
-      //     << '[' << v[i] << ']' << " <-> " << '[' << v[minIndex] << ']' << std::endl;
-      std::cout << "\033[2J\033[1;1H"; // Clears screen and moves cursor to top-left
       swap(v[i], v[minIndex]);
-      int temp;
-      temp = red;
-      red = green;
-      green = temp;
       runAnimation(min, minIndex, v.size() - 1, i, v);
+      if(i!=(v.size()-2)) clear();
     }
-    pause(800);
-    std::cout << "\033[2J\033[1;1H"; // Clears screen and moves cursor to top-left
   }
   green = -1;
   red = -1;
