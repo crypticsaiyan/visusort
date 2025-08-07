@@ -77,7 +77,7 @@ void heapSort(std::vector<int32_t> &v)
     runCustomAnimation(i, 0, v, '.');
     clear();
     swap(v[0], v[i]);
-    runCustomAnimation(i, 0, v, '.');
+    runCustomAnimation(0, i, v, '.');
     clear();
     isIndexSorted[i] = 1;
     heapify(v, i, 0);

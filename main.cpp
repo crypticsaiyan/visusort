@@ -58,9 +58,7 @@ int main(int argc, char *argv[])
   }
   else if (algorithm == "quick")
   {
-    // quickSort(v); // TODO: Implement quick sort
-    std::cerr << "Quick sort not yet implemented" << std::endl;
-    return 1;
+    quickSort(v);
   }
   else
   {

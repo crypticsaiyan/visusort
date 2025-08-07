@@ -42,8 +42,12 @@ def print_menu():
     print("  ╚═══╝  ╚═╝╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝")
     print("\nUse ↑/↓ arrow keys to move, Enter to select:\n")
     for i, option in enumerate(options):
-        marker = "[x] " if i == selected else "[ ] "
-        print(f"{marker}{option}")
+        if i == selected:
+            marker = "\033[1;34m[x] "  # Bold blue
+            print(f"{marker}{option}\033[0m")  # Reset formatting after
+        else:
+            marker = "[ ] "
+            print(f"{marker}{option}")
     print("\nPress 'q' to quit")
 
 while True:

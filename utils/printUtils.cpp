@@ -36,8 +36,10 @@ void printArr(std::vector<int32_t> &v)
       std::cout << RED << "[" << v[i] << "] " << RESET;
     else if (green == i)
       std::cout << GREEN << "[" << v[i] << "] " << RESET;
-    else
+    else if (blueIndex.first <= i && blueIndex.second >= i)
       std::cout << BLUE << "[" << v[i] << "] " << RESET;
+    else
+      std::cout << "[" << v[i] << "] ";
   }
   std::cout << std::endl;
 }
