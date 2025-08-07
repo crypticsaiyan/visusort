@@ -11,3 +11,4 @@ void runAnimation(size_t currentIndex, size_t startIndex, std::vector<int32_t> &
 void pause(int timeInMilliseconds);
 void clear();
 void resetGlobals();
+void runCustomAnimation(size_t currentIndex, size_t startIndex, std::vector<int32_t> &v, char symbol);

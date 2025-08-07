@@ -41,7 +41,7 @@ void selectionSort(std::vector<int32_t> &v)
     if (i == v.size() - 2)
     {
       isIndexSorted.assign(isIndexSorted.size(), 1);
-      runAnimation(0, 0, v);
+      runCustomAnimation(i, 0, v, ' ');
       resetGlobals();
       break;
     }

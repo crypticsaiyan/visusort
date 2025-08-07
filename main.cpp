@@ -52,11 +52,9 @@ int main(int argc, char *argv[])
   {
     bubbleSort(v);
   }
-  else if (algorithm == "merge")
+  else if (algorithm == "heap")
   {
-    // mergeSort(v); // TODO: Implement merge sort
-    std::cerr << "Merge sort not yet implemented" << std::endl;
-    return 1;
+    heapSort(v);
   }
   else if (algorithm == "quick")
   {

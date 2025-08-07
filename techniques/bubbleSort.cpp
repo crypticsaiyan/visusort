@@ -32,7 +32,7 @@ void bubbleSort(std::vector<int32_t> &v)
     if (!swapped || (i == v.size() - 2))
     {
       isIndexSorted.assign(isIndexSorted.size(), 1);
-      runAnimation(0, 0, v);
+      runCustomAnimation(i, 0, v, ' ');
       resetGlobals();
       break;
     }

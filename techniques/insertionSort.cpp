@@ -20,10 +20,10 @@ void insertionSort(std::vector<int32_t> &v)
       j--;
     }
     clear();
-    if (i == v.size() - 2)
+    if (i == v.size() - 1)
     {
       isIndexSorted.assign(isIndexSorted.size(), 1);
-      runAnimation(0, 0, v);
+      runCustomAnimation(i, 0, v, ' ');
       resetGlobals();
       break;
     }
