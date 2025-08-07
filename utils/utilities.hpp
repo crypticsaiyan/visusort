@@ -10,3 +10,4 @@ void swap(int32_t &x, int32_t &y);
 void runAnimation(size_t currentIndex, size_t startIndex, std::vector<int32_t> &v);
 void pause(int timeInMilliseconds);
 void clear();
+void resetGlobals();

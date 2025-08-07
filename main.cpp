@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
         max++;
     }
   }
+  isIndexSorted.assign(n, 0);
   clear();
   int maxLength = (max == 0) ? 1 : std::log10(max) + 1;
   std::cout << "\033[?25l"; // Hide cursor
@@ -49,9 +50,7 @@ int main(int argc, char *argv[])
   }
   else if (algorithm == "bubble")
   {
-    // bubbleSort(v); // TODO: Implement bubble sort
-    std::cerr << "Bubble sort not yet implemented" << std::endl;
-    return 1;
+    bubbleSort(v);
   }
   else if (algorithm == "merge")
   {
@@ -71,6 +70,7 @@ int main(int argc, char *argv[])
     std::cerr << "Available algorithms: selection, insertion, bubble, merge, quick" << std::endl;
     return 1;
   }
+  resetGlobals();
   std::cout << "press any key to return to menu...\n";
   return 0;
 }

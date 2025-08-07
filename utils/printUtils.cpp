@@ -1,7 +1,6 @@
 #include "utilities.hpp"
 #include <cmath>
 
-
 void printSymbol(size_t indexSelected, char ch, std::vector<int32_t> &v)
 {
   int spaces = 0;
@@ -31,7 +30,9 @@ void printArr(std::vector<int32_t> &v)
 {
   for (int i = 0; i < v.size(); i++)
   {
-    if (red == i)
+    if (isIndexSorted[i] == 1)
+      std::cout << YELLOW << "[" << v[i] << "] " << RESET;
+    else if (red == i)
       std::cout << RED << "[" << v[i] << "] " << RESET;
     else if (green == i)
       std::cout << GREEN << "[" << v[i] << "] " << RESET;

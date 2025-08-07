@@ -19,10 +19,13 @@ void insertionSort(std::vector<int32_t> &v)
       runAnimation(j, j - 1, v);
       j--;
     }
-    if (i != v.size() - 1)
-      clear();
+    clear();
+    if (i == v.size() - 2)
+    {
+      isIndexSorted.assign(isIndexSorted.size(), 1);
+      runAnimation(0, 0, v);
+      resetGlobals();
+      break;
+    }
   }
-  red = -1;
-  green = -1;
-  comparisons = 0;
 }

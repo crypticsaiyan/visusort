@@ -36,10 +36,14 @@ void selectionSort(std::vector<int32_t> &v)
       swap(v[i], v[minIndex]);
       runAnimation(v.size() - 1, i, v);
     }
-    if (i != v.size() - 2 && (v.size() != 2))
-      clear();
+    isIndexSorted[i] = 1;
+    clear();
+    if (i == v.size() - 2)
+    {
+      isIndexSorted.assign(isIndexSorted.size(), 1);
+      runAnimation(0, 0, v);
+      resetGlobals();
+      break;
+    }
   }
-  green = -1;
-  red = -1;
-  comparisons = 0;
 }
