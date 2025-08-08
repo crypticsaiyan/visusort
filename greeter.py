@@ -4,7 +4,7 @@ import sys
 import termios
 import tty
 
-options = ["Selection Sort", "Insertion Sort", "Bubble Sort", "Quick Sort", "Merge Sort", "Heap Sort"]
+options = ["Selection Sort", "Insertion Sort", "Bubble Sort", "Quick Sort", "Merge Sort", "Heap Sort", "Counting Sort"]
 selected = 0
 mapping = {
     "Selection Sort": "selection",
@@ -12,7 +12,8 @@ mapping = {
     "Bubble Sort": "bubble",
     "Quick Sort": "quick",
     "Merge Sort": "merge",
-    "Heap Sort": "heap"
+    "Heap Sort": "heap",
+    "Counting Sort": "counting"
 }
 
 def clear():

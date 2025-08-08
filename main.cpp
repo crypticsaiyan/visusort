@@ -64,6 +64,10 @@ int main(int argc, char *argv[])
   {
     mergeSort(v);
   }
+  else if (algorithm == "counting")
+  {
+    countingSort(v);
+  }
   else
   {
     std::cerr << "Unknown algorithm: " << algorithm << std::endl;

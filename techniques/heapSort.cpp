@@ -38,13 +38,14 @@ void heapify(std::vector<int32_t> &v, size_t n, size_t i)
       red = right;
     }
   }
+  size_t lastPos = right < n ? right : left;
 
   if (largest != i)
   {
-    runAnimation(largest, i, v);
+    runAnimation(lastPos, i, v);
     clear();
     swap(v[i], v[largest]);
-    runAnimation(i, largest, v);
+    runAnimation(lastPos, i, v);
     clear();
     heapify(v, n, largest);
   }

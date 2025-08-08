@@ -44,6 +44,7 @@ void printArr(std::vector<int32_t> &v)
   std::cout << std::endl;
 }
 
+// For Merge Sort
 void printStorage(std::vector<std::vector<int32_t>> storage)
 {
   clear();
@@ -62,4 +63,81 @@ void printStorage(std::vector<std::vector<int32_t>> storage)
   }
   std::cout << std::endl;
   pause(1000);
+}
+
+
+//For Counting Sort
+void printCount(std::vector<int32_t> &count, size_t highlightIndex, char x)
+{
+  for (size_t i = 0; i < count.size(); i++)
+  {
+    if (i == highlightIndex)
+    {
+      if (x == 'G')
+        std::cout << GREEN << "[" << count[i] << "] " << RESET;
+      else if (x == 'B')
+        std::cout << BLUE << "[" << count[i] << "] " << RESET;
+      else if (x == 'R')
+        std::cout << RED << "[" << count[i] << "] " << RESET;
+      else if (x == 'Y')
+        std::cout << YELLOW << "[" << count[i] << "] " << RESET;
+      else
+        std::cout << "[" << count[i] << "] ";
+    }
+    else
+      std::cout << "[" << count[i] << "] ";
+  }
+  std::cout << std::endl;
+}
+
+void runCountingAnimation(std::vector<int32_t> &v, size_t vIndex, std::vector<int32_t> &count, size_t highlightIndex, char x, std::vector<int32_t> output, size_t oIndex)
+{
+  clear();
+  greeter();
+  if (vIndex != -1)
+  {
+    printCount(v, vIndex, 'B');
+    printSymbol(vIndex, '^', v);
+  }
+  else
+  {
+    printCount(v, vIndex, 'x');
+    std::cout << std::endl;
+  }
+  if (prefixFlag == 1)
+    std::cout << "Making the Prefix Array:" << std::endl;
+  else if (prefixFlag == 0)
+    std::cout << "Counting the number of occurances:" << std::endl;
+  else
+    std::cout << "Prefix Array:" << std::endl;
+
+  if (prefixFlag == 1)
+  {
+    // Temporarily resize isIndexSorted for count array printing
+    size_t originalSize = isIndexSorted.size();
+    isIndexSorted.resize(count.size(), 0);
+    printArr(count);
+    isIndexSorted.resize(originalSize);
+  }
+  else
+    printCount(count, highlightIndex, x);
+  std::cout << std::endl;
+
+  // Temporarily save and clear blueIndex for output array printing
+  std::pair<int, int> tempBlueIndex = blueIndex;
+  blueIndex = {-1, -1};
+  printArr(output);
+  // Restore blueIndex only if we're in prefix phase
+  if (prefixFlag == 1)
+    blueIndex = tempBlueIndex;
+    
+  if (oIndex != -1)
+  {
+    printSymbol(oIndex, '^', v);
+  }
+  else
+  {
+    std::cout << std::endl;
+  }
+  pause(pause_duration);
 }

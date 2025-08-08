@@ -23,6 +23,8 @@ void greeter()
     std::cout << "\033[1m[Quick Sort]\033[0m";
   else if(algorithm == "merge")
     std::cout << "\033[1m[Merge Sort]\033[0m";
+  else if(algorithm == "counting")
+    std::cout << "\033[1m[Counting Sort]\033[0m";
   std::cout << "\t\t\tcomparisons: " << comparisons;
   std::cout << "\n\n";
 }

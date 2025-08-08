@@ -14,3 +14,5 @@ void clear();
 void resetGlobals();
 void runCustomAnimation(size_t currentIndex, size_t startIndex, std::vector<int32_t> &v, char symbol);
 void printStorage(std::vector<std::vector<int32_t>> storage);
+void printCount(std::vector<int32_t> &count, size_t highlightIndex, char x);
+void runCountingAnimation(std::vector<int32_t> &v, size_t vIndex, std::vector<int32_t> &count, size_t highlightIndex, char x, std::vector<int32_t> output, size_t oIndex);

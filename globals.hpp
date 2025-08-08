@@ -18,3 +18,4 @@ extern int pause_duration;
 extern std::string algorithm;
 extern std::vector<bool> isIndexSorted;
 extern std::pair<int, int> blueIndex;
+extern int prefixFlag;
