@@ -1,5 +1,4 @@
 #include "utilities.hpp"
-#include "../cli/greeter.hpp"
 
 void runAnimation(size_t currentIndex, size_t startIndex, std::vector<int32_t> &v)
 {

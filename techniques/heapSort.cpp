@@ -85,5 +85,4 @@ void heapSort(std::vector<int32_t> &v)
   isIndexSorted.assign(isIndexSorted.size(), 1);
   runAnimation(0, 0, v);
   resetGlobals();
-  resetGlobals();
 }

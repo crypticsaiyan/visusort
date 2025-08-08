@@ -60,6 +60,10 @@ int main(int argc, char *argv[])
   {
     quickSort(v);
   }
+  else if (algorithm == "merge")
+  {
+    mergeSort(v);
+  }
   else
   {
     std::cerr << "Unknown algorithm: " << algorithm << std::endl;
