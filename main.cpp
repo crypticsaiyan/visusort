@@ -9,14 +9,15 @@
 
 int main(int argc, char *argv[])
 {
-  if (argc != 2)
+  if (argc != 3)
   {
-    std::cerr << "Usage: " << argv[0] << " <algorithm>" << std::endl;
-    std::cerr << "Available algorithms: selection, insertion, bubble, quick, merge, heap" << std::endl;
+    std::cerr << "Usage: " << argv[0] << " <algorithm> <displayTheory>" << std::endl;
+    std::cerr << "Available algorithms: selection, insertion, bubble, quick, merge, heap, counting" << std::endl;
     return 1;
   }
 
   algorithm = argv[1];
+  theoryFlag = (std::string(argv[2]) == "1");
 
   size_t n;
   int32_t max = 0;
@@ -71,7 +72,7 @@ int main(int argc, char *argv[])
   else
   {
     std::cerr << "Unknown algorithm: " << algorithm << std::endl;
-    std::cerr << "Available algorithms: selection, insertion, bubble, merge, quick" << std::endl;
+    std::cerr << "Available algorithms: selection, insertion, bubble, merge, quick, counting" << std::endl;
     return 1;
   }
   resetGlobals();

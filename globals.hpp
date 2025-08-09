@@ -16,6 +16,7 @@ extern size_t green;
 extern size_t comparisons;
 extern int pause_duration;
 extern std::string algorithm;
+extern bool theoryFlag;
 extern std::vector<bool> isIndexSorted;
 extern std::pair<int, int> blueIndex;
 extern int prefixFlag;
