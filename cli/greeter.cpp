@@ -27,6 +27,6 @@ void greeter()
     std::cout << BLUE << "\033[1m[Merge Sort]\033[0m" << RESET;
   else if (algorithm == "counting")
     std::cout << BLUE << "\033[1m[Counting Sort]\033[0m" << RESET;
-  std::cout << BLUE << "\t\t\tcomparisons: " << RESET << comparisons;
+  std::cout << BLUE << "\t\tsteps: " << RESET << comparisons;
   std::cout << "\n\n";
 }

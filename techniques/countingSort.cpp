@@ -24,6 +24,7 @@ void countingSort(std::vector<int32_t> &v)
   prefixFlag = 1;
   for (size_t i = 1; i < count.size(); i++)
   {
+    comparisons++;
     blueIndex = {0, i - 1};
     runCountingAnimation(v, -1, count, i, 'B', output, -1);
     count[i] += count[i - 1];
@@ -34,6 +35,7 @@ void countingSort(std::vector<int32_t> &v)
   prefixFlag = 2;
   for (int32_t i = static_cast<int32_t>(v.size()) - 1; i >= 0; i--)
   {
+    comparisons++;
     clear();
     int32_t num = v[i];
     output[--count[num - minVal]] = num;

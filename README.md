@@ -1,28 +1,35 @@
-# VisuSort - Sorting Algorithm Visualizer
-
-<div align="center">
-
-```
-██╗   ██╗██╗███████╗██╗   ██╗███████╗ ██████╗ ██████╗ ████████╗
-██║   ██║██║██╔════╝██║   ██║██╔════╝██╔═══██╗██╔══██╗╚══██╔══╝
-██║   ██║██║███████╗██║   ██║███████╗██║   ██║██████╔╝   ██║   
-╚██╗ ██╔╝██║╚════██║██║   ██║╚════██║██║   ██║██╔══██╗   ██║   
- ╚████╔╝ ██║███████║╚██████╔╝███████║╚██████╔╝██║  ██║   ██║   
-  ╚═══╝  ╚═╝╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
-```
+# VisuSort  
 
 *A terminal-based interactive sorting algorithm visualizer written in C++*
 
-</div>
+![Main Menu](assets/screenshots/interface.png)
+
+| ![Merge Sort](assets/screenshots/merge.png) |
+| :------------------------------------------: |
+| *Merge Sort visualization* |
+
+| ![Selection Sort](assets/screenshots/selection.png) | ![Counting Sort](assets/screenshots/counting.png) |
+| :-------------------------------------------------: | :-----------------------------------------------: |
+| *Selection Sort visualization* | *Counting Sort visualization* |
+
+| ![Theory](assets/screenshots/theory.png) |
+| :------------------------------------------: |
+| *With Theory* | *Theory behind Counting Sort* |
 
 ## 🎯 Supported Sorting Algorithms
 
 - Selection Sort
+
 - Insertion Sort
+
 - Bubble Sort
+
 - Quick Sort
+
 - Merge Sort
+
 - Heap Sort
+
 - Counting Sort
 
 ## 💡 Prerequisites
