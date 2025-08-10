@@ -46,11 +46,18 @@ def print_menu():
     
     # Display theory checkbox
     if selected == -1:
-        checkbox = "\033[1;34m[x] " if display_theory else "\033[1;34m[ ] "
+        if display_theory:
+            checkbox = "\033[1;34m[x] "
+        else:
+            checkbox = "\033[1;34m[ ] "
         print(f"{checkbox}Display Theory\033[0m")
     else:
-        checkbox = "[x] " if display_theory else "[ ] "
-        print(f"{checkbox}Display Theory")
+        if display_theory:
+            checkbox = "\033[1;34m[x] "
+            print(f"{checkbox}Display Theory\033[0m")
+        else:
+            checkbox = "[ ] "
+            print(f"{checkbox}Display Theory")
     
     print()  # Empty line for separation
     

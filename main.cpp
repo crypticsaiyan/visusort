@@ -6,6 +6,7 @@
 #include <vector>
 #include <cmath>
 #include <string>
+#include <limits>
 
 int main(int argc, char *argv[])
 {
@@ -22,12 +23,35 @@ int main(int argc, char *argv[])
   size_t n;
   int32_t max = 0;
   greeter();
-  std::cout << "Enter the value of n: ";
-  std::cin >> n;
+  
+  // Get array size with error handling
+  while (true) {
+    std::cout << "Enter the length of test array: ";
+    if (std::cin >> n && n > 1) {
+      break;
+    } else {
+      std::cout << "Invalid input! Please enter a positive integer greater than 1.\n";
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+  }
+  
+  std::cout << "Enter the values separated by spaces: ";
   std::vector<int32_t> v(n);
+  
+  // Get array values with error handling
   for (size_t i = 0; i < n; i++)
   {
-    std::cin >> v[i];
+    while (true) {
+      if (std::cin >> v[i]) {
+        break;
+      } else {
+        std::cout << "Invalid input! Please enter an integer for position " << (i + 1) << ": ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      }
+    }
+    
     if (abs(v[i]) > max)
     {
       max = abs(v[i]);
