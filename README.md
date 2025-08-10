@@ -105,6 +105,20 @@ Enter the values separated by spaces: 64 34 25 12 22
 
 **Note:** The visual elements may vary slightly based on the terminal emulator used.
 
+## ⚙️ Customization
+
+### Animation Speed
+You can adjust the animation speed by modifying the `pause_duration` value in `globals.cpp` and recompiling:
+
+1. Open `globals.cpp`
+2. Change the value of `pause_duration` (default is 200ms)
+   - Lower values = faster animation
+   - Higher values = slower animation
+3. Recompile using the installation script:
+   ```bash
+   ./installation.sh
+   ```
+
 ## 📝 License
 MIT License
 
@@ -120,6 +134,8 @@ MIT License
 <div align="center">
 
 **Made with ❤️ by crypticsaiyan**
+
+⭐ **If you found this project useful, please consider giving it a star!** ⭐
 
 [Report Bug](https://github.com/crypticsaiyan/visusort/issues) · [Request Feature](https://github.com/crypticsaiyan/visusort/issues)
 
