@@ -106,8 +106,7 @@ Enter the values separated by spaces: 64 34 25 12 22
 **Note:** The visual elements may vary slightly based on the terminal emulator used.
 
 ## 📝 License
-
-
+MIT License
 
 ## 📊 Performance Notes
 
