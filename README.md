@@ -53,7 +53,7 @@
    ./installation.sh
    
    # Or manually
-   g++ -O3 -DNDEBUG -march=native -s $(find . -name "*.cpp") -o main
+   g++ -O3 -s $(find . -name "*.cpp") -o main
    ```
 
 ## 📚 Usage
