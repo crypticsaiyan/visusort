@@ -5,3 +5,4 @@
 [ ] add radix sort
 [ ] add bar visualisation
 [ ] make the TUI better by centering things
+[ ] improve the quickSort logic

@@ -8,6 +8,7 @@ void insertionSort(std::vector<int32_t> &v)
     red = -1;
     runAnimation(i, i, v);
     size_t j = i;
+    comparisons++;
     while (j > 0 && v[j] < v[j - 1])
     {
       comparisons++;

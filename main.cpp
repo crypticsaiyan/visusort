@@ -7,6 +7,8 @@
 #include <cmath>
 #include <string>
 #include <limits>
+#include <cctype>
+#include <stdexcept>
 
 int main(int argc, char *argv[])
 {
@@ -26,13 +28,53 @@ int main(int argc, char *argv[])
   
   // Get array size with error handling
   while (true) {
-    std::cout << "Enter the length of test array: ";
-    if (std::cin >> n && n > 1) {
+    std::cout << "Enter the length of test array (positive integer > 1): ";
+    std::string input;
+    std::getline(std::cin, input);
+    
+    // Remove leading/trailing whitespace
+    input.erase(0, input.find_first_not_of(" \t"));
+    input.erase(input.find_last_not_of(" \t") + 1);
+    
+    // Check if input is empty
+    if (input.empty()) {
+      std::cout << "Error: No input provided. Please enter a positive integer greater than 1.\n";
+      continue;
+    }
+    
+    // Check if input contains only digits
+    bool isValidNumber = true;
+    for (char c : input) {
+      if (!std::isdigit(c)) {
+        isValidNumber = false;
+        break;
+      }
+    }
+    
+    if (!isValidNumber) {
+      std::cout << "Error: Invalid input '" << input << "'. Please enter only positive integers.\n";
+      continue;
+    }
+    
+    // Convert to size_t and check range
+    try {
+      n = std::stoull(input);
+      if (n < 2) {
+        std::cout << "Error: Array size must be greater than 1. You entered: " << n << "\n";
+        continue;
+      }
+      if (n > 1000) {
+        std::cout << "Warning: Large array size (" << n << ") may cause slow visualization. Continue? (y/n): ";
+        std::string confirm;
+        std::getline(std::cin, confirm);
+        if (confirm != "y" && confirm != "Y" && confirm != "yes" && confirm != "Yes") {
+          continue;
+        }
+      }
       break;
-    } else {
-      std::cout << "Invalid input! Please enter a positive integer greater than 1.\n";
-      std::cin.clear();
-      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    } catch (const std::exception& e) {
+      std::cout << "Error: Number too large. Please enter a smaller positive integer.\n";
+      continue;
     }
   }
   
